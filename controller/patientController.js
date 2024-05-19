@@ -1,6 +1,6 @@
 const bcrypt=require("bcrypt");
 const Patient=require("../modals/patientModal")
-const {uploadFile}=require("../upload");
+const {uploadFile}=require("../config/upload");
 require("dotenv").config();
 const patientRegister=async(req,res)=>{
     
@@ -11,7 +11,7 @@ const patientRegister=async(req,res)=>{
         const hashedPassword = await bcrypt.hash(password, 10);
         
         const patientData = { name, address, email, phone, password: hashedPassword, photo:result.url,psychiatristId  };
-        let patient =new Patient(patientData);
+        let patient = new Patient(patientData);
         await patient.save()
         res.status(201).send('Patient registered successfully');
     } catch (error) {

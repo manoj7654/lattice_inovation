@@ -1,5 +1,5 @@
 const express = require('express');
-const { validatePatientForm, validate } = require('../validators/patientValidator');
+const { validatePatientForm, validate } = require('../config/patientValidator');
 const { patientRegister } = require('../controller/patientController');
 const multer = require('multer');
 // const { authenticate } = require('../middleware/psychiatristAuthentication');
