@@ -14,6 +14,10 @@
 
 - [Dependency](#dependency)
 
+- [Deployed Link](#deployed-link)
+
+- [Swagger-doc](#swagger-doc)
+
 ### Installation
 
 - Clone the repository:
@@ -53,22 +57,36 @@
 
 `Hospitals`
 
-#### Get Hospital Details
+#### Get All Hospital
 
 - Endpoint : /hospitals/allHospital
 - Method: GET
 
 - Response:
 
-            200 OK: Hospital details.
+            200 OK: List of hospital.
             500 Internal Server Error: Server error.
 
+#### Hospital Details along with patient,psychiatrist
+
+- Endpoint : /hospitals/hospitalDetails
+- Method: POST
+
+- Request Body:
+
+            {
+            "hospitalId": "hospital_id"
+            }
+- Response:
+
+            200 OK: List of hospital.
+            500 Internal Server Error: Server error.
 
 `Psychiatrists`
 
-#### Get All Psychiatrists by Hospital
+#### Get All Psychiatrists by HospitalId
 - Endpoint : /psychiatrists/getPsychiatristByHospitalId
-- Method: GET
+- Method: POST
 Request Body:
 
             {
@@ -167,3 +185,10 @@ Request Body:
 
 - Cloudinary: A cloud-based image and video management service. It provides features for uploading, storing, managing, and delivering images and videos for web and mobile applications. Cloudinary also offers image manipulation and optimization capabilities.
 
+### Deployed Link
+
+- [Live](https://lattice-inovation.onrender.com/)
+
+### Swagger-doc
+
+-  [Swagger](https://lattice-inovation.onrender.com/api-docs)

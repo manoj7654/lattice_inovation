@@ -29,7 +29,7 @@ const options = {
         },
         servers: [
             {
-                url: "http://localhost:4500"
+                url: "https://lattice-inovation.onrender.com/"
             }
         ],
     },
