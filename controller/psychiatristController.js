@@ -24,4 +24,4 @@ const getPsychiatristByHospitalId = async (req, res) => {
   };
   
 
-module.exports={PsychiatristRegister,getPsychiatristByHospitalId,getAllPsychiatrist}
+module.exports={getPsychiatristByHospitalId,getAllPsychiatrist}

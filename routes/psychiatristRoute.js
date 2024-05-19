@@ -3,7 +3,7 @@ const { getPsychiatristByHospitalId, getAllPsychiatrist } = require('../controll
 const psychiatristRouter = express.Router();
 
 
-psychiatristRouter.get('/getPsychiatristByHospitalId', getPsychiatristByHospitalId);
+psychiatristRouter.post('/getPsychiatristByHospitalId', getPsychiatristByHospitalId);
 psychiatristRouter.get("/allPsychiatrist",getAllPsychiatrist)
 
 module.exports = {psychiatristRouter};

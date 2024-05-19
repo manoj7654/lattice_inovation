@@ -1,8 +1,8 @@
 const express = require('express');
-const { getHospitalDetails } = require('../controller/hospitalController');
+const { hospitalDetails, allHospital } = require('../controller/hospitalController');
 const hospitalRouter = express.Router();
 
 
-hospitalRouter.get("/allHospital",getHospitalDetails)
-
+hospitalRouter.post("/hospitalDetails",hospitalDetails)
+hospitalRouter.get("/allHopsital",allHospital)
 module.exports = {hospitalRouter};

@@ -3,7 +3,7 @@ const Psychiatrist = require('../modals/psychiatristModal');
 const Patient = require('../modals/patientModal');
 
 
-const getHospitalDetails = async (req, res) => {
+const hospitalDetails = async (req, res) => {
     const { hospitalId } = req.body;
 
     try {
@@ -46,5 +46,16 @@ const getHospitalDetails = async (req, res) => {
         res.status(500).send('Server error');
     }
 };
+const allHospital = async (req, res) => {
+    
 
-module.exports={hospitalAdd,getHospitalDetails}
+    try {
+        const hospital = await Hospital.find();
+        
+        res.json(hospital);
+    } catch (error) {
+        console.error('Error:', error);
+        res.status(500).send('Server error');
+    }
+};
+module.exports={hospitalDetails,allHospital}
