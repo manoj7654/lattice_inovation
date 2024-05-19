@@ -8,11 +8,8 @@ const {patientRouter} = require("./routes/patientRouter");
 const { hospitalRouter } = require("./routes/hospitalRoute");
 const { psychiatristRouter } = require("./routes/psychiatristRoute");
 
-// const { Hospital, Psychiatrist, Patient } = require('./association');
-// importing dotenv for accessing data from .env file
-require("dotenv").config()
 
-/
+require("dotenv").config()
 
 app.use(express.json())
 
