@@ -2,16 +2,6 @@ const Hospital=require("../modals/hospitalModal")
 const Psychiatrist = require('../modals/psychiatristModal');
 const Patient = require('../modals/patientModal');
 
-const hospitalAdd=async(req,res)=>{
-    try {
-         let result=new Hospital(req.body);
-         result.save()
-
-        res.status(201).send('Hospiatal added successfully');
-    } catch (error) {
-        res.status(500).send(error.message);
-    }
-}
 
 const getHospitalDetails = async (req, res) => {
     const { hospitalId } = req.body;
