@@ -1,3 +1,7 @@
+# Hospital Management System
+
+- This  managing for hospitals, psychiatrists, and patients within a mental health system. The API is built using Node.js, Express, and MongoDB. It allows you to add and retrieve details about hospitals, psychiatrists, and patients, including patient photo uploads via Cloudinary.
+
 ## Table of Contents
 
 - [Installation](#installation)
